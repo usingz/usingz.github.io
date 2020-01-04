@@ -40,4 +40,36 @@
     
   </entry>
   
+  <entry>
+    <title>排序</title>
+    <link href="https://usingz.github.io/2020/01/03/pai-xu/"/>
+    <id>https://usingz.github.io/2020/01/03/pai-xu/</id>
+    <published>2020-01-03T08:35:17.000Z</published>
+    <updated>2020-01-04T08:18:42.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在工程中综合排序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先判断是否为基础类型&lt;/li&gt;
+&lt;li&gt;如果是基础类型则使用&lt;code&gt;快排&lt;/code&gt;，分治时小于60则插排（不用保持稳定性）&lt;/li&gt;
+&lt;li&gt;如果是自定义数据类型&lt;code&gt;归并排序&lt;/code&gt;，分治时小于60则插排（
+        
+      
+    
+    </summary>
+    
+      <category term="面试算法" scheme="https://usingz.github.io/categories/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://usingz.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="面试" scheme="https://usingz.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
 </feed>

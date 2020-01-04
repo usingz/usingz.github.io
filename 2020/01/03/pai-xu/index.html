@@ -6,11 +6,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="第一篇博客, 入侵检测 半监督学习 深度学习">
+    <meta name="keywords" content="排序, 入侵检测 半监督学习 深度学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="简短介绍参照大佬的的博客hexo-blog-fly，&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;源代码下载&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;
-本博客基于Hexo框架搭建，用到hexo-theme-matery主题, 并在此基础之上做了很多">
+    <meta name="description" content="在工程中综合排序：
+
+先判断是否为基础类型
+如果是基础类型则使用快排，分治时小于60则插排（不用保持稳定性）
+如果是自定义数据类型归并排序，分治时小于60则插排（保持稳定性）
+如果数据长度很短则使用插排,插排常数项极低，小样本情况很快
+
+对">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>第一篇博客 | 瞭望的博客</title>
+    <title>排序 | 瞭望的博客</title>
     <link rel="icon" type="image/png" href>
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -403,13 +409,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        第一篇博客
+                        排序
                     </div>
                 </div>
             </div>
@@ -519,9 +525,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/算法/" target="_blank">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                            <a href="/tags/面试/" target="_blank">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -529,8 +543,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/软件安装与配置/" class="post-category" target="_blank">
-                                软件安装与配置
+                            <a href="/categories/面试算法/" class="post-category" target="_blank">
+                                面试算法
                             </a>
                         
                     </div>
@@ -541,7 +555,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    20201-01-05
+                    2020-01-03
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -555,14 +569,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        8 分
                     </div>
                     
                 
@@ -579,112 +593,178 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简短介绍"><a href="#简短介绍" class="headerlink" title="简短介绍"></a>简短介绍</h1><p>参照大佬的的博客<a href="https://github.com/shw2018/hexo-blog-fly.git" target="_blank" rel="noopener">hexo-blog-fly</a>，&lt;&lt;&lt;&lt;&lt;<a href="https://github.com/shw2018/hexo-blog-fly" target="_blank" rel="noopener">源代码下载</a>&gt;&gt;&gt;&gt;&gt;</p>
-<p>本博客基于<code>Hexo</code>框架搭建，用到<a href="https://github.com/shw2018/hexo-theme-matery" target="_blank" rel="noopener">hexo-theme-matery</a>主题, 并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：<a href="https://shw2018.github.io/" target="_blank" rel="noopener">https://shw2018.github.io</a>，博客演示：<a href="https://sunhwee.com" target="_blank" rel="noopener">sunhwee.com</a>。</p>
-<hr>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p><strong>原主题特性</strong>:</p>
+                <p>在工程中综合排序：</p>
 <ul>
-<li><p>简单漂亮，文章内容美观易读</p>
-</li>
-<li><p><a href="https://material.io/" target="_blank" rel="noopener">Material Design</a> 设计</p>
-</li>
-<li><p>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</p>
-</li>
-<li><p>首页轮播文章及每天动态切换 <code>Banner</code> 图片</p>
-</li>
-<li><p>瀑布流式的博客文章列表（文章无特色图片时会有 <code>24</code> 张漂亮的图片代替）</p>
-</li>
-<li><p>时间轴式的归档页</p>
-</li>
-<li><p><strong>词云</strong>的标签页和<strong>雷达图</strong>的分类页</p>
-</li>
-<li><p>丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</p>
-</li>
-<li><p>可自定义的数据的友情链接页面</p>
-</li>
-<li><p>支持文章置顶和文章打赏</p>
-</li>
-<li><p>支持 <code>MathJax</code></p>
-</li>
-<li><p><code>TOC</code> 目录</p>
-</li>
-<li><p>可设置复制文章内容时追加版权信息</p>
-</li>
-<li><p>可设置阅读文章时做密码验证</p>
-</li>
-<li><p><a href="https://gitalk.github.io/" target="_blank" rel="noopener">Gitalk</a>、<a href="https://imsun.github.io/gitment/" target="_blank" rel="noopener">Gitment</a>、<a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a> 和 <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a> 评论模块（推荐使用 <code>Gitalk</code>）</p>
-</li>
-<li><p>集成了<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子统计</a>、谷歌分析（<code>Google Analytics</code>）和文章字数统计等功能</p>
-</li>
-<li><p>支持在首页的音乐播放和视频播放功能</p>
-<p><strong>增加的工作或特性(未打钩的是已做但还没更新到源码的)</strong>:</p>
-</li>
-<li><p>修改了原主题的一些很多<code>bug</code>   2019.08.05</p>
-</li>
-<li><p>加入图片懒加载功能，在根目录配置文件开启和关闭    2019.08.09</p>
-</li>
-<li><p>增加<code>留言板</code>功能          2019.08.05</p>
-</li>
-<li><p>在关于板块,加入<code>简历</code>功能页   2019.08.05</p>
-</li>
-<li><p>增加视听[视觉听觉影音]板块       2019.08.10</p>
-</li>
-<li><p>支持<code>emoji</code>表情，用<code>markdown emoji</code>语法书写直接生成对应的能<strong>跳跃</strong>的表情。  2019.08.10</p>
-</li>
-<li><p>增加网站运行时间显示  2019.08.10</p>
-</li>
-<li><p>增加<code>动漫模型</code>     2019.08.10</p>
-</li>
-<li><p>整体替换Banner图片和文章特色图片   2019.08.10</p>
-</li>
-<li><p>增加分类<code>相册</code>功能         2019.08.29</p>
-</li>
-<li><p>去掉标签页,将其合并至<code>分类</code>页中                2019.09.01</p>
-</li>
-<li><p>修改了一些控件的参数   2019.09.01</p>
-</li>
-<li><p>修改部分样式,比如: 文章卡片,固定高度,使其不至于因为文章摘要的长短不同导致卡片大小不一使页面布局很不美观,类似的还有友链卡片,优化了页面内容布局,视觉更整齐美观          2019.09.01</p>
-</li>
-<li><p>解决首页文章列表卡片上方 <code>border-radius</code>圆角失效的bug  2019.09.01</p>
-</li>
-<li><p>添加页面樱花飘落动效            2019.09.09</p>
-</li>
-<li><p>添加鼠标点击烟花爆炸动效   2019.09.09</p>
-</li>
-<li><p>加入天气接口控件   2019.09.09</p>
-</li>
-<li><p>加入鼠标点击文字特效   2019.09.10</p>
-</li>
-<li><p>添加页面雪花飘落动效            2019.09.10</p>
-</li>
-<li><p>添加在线聊天插件            2019.09.12</p>
-</li>
-<li><p>持续更新…</p>
-</li>
+<li>先判断是否为基础类型</li>
+<li>如果是基础类型则使用<code>快排</code>，分治时小于60则插排（不用保持稳定性）</li>
+<li>如果是自定义数据类型<code>归并排序</code>，分治时小于60则插排（保持稳定性）</li>
+<li>如果数据长度很短则使用<code>插排</code>,插排常数项极低，小样本情况很快</li>
 </ul>
-<hr>
-<p><strong>简单使用方法：</strong></p>
-<ol>
-<li><code>star</code> 本项目</li>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>, 安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodeJS</a></li>
-<li>你可以直接<code>fork</code>一份源码到你的仓库，<code>clone</code>到本地</li>
-<li>在本地博客仓库运行<code>npm i</code>命令安装依赖包</li>
-<li>修改配置信息，改成自己的信息</li>
-<li>运行命令<code>hexo  clean</code>（清除生成文件），<code>hexo g</code>（生成网页）， <code>hexo  s</code>（本地预览），<code>hexo d</code>（部署）</li>
-</ol>
-<blockquote>
-<p><strong>更多详情教程，强烈推荐看我写的：<a href="https://sunhwee.com/posts/6e8839eb.html" target="_blank" rel="noopener">Hexo+Github博客搭建完全教程</a></strong></p>
-</blockquote>
-<blockquote>
-<p><strong>最后，如果项目和教程对你有所帮助或者你看见了还算比较喜欢，欢迎给我<code>star</code>，谢谢您！</strong></p>
-</blockquote>
-<p><strong>持续更新中…，如果遇到问题欢迎联系我，在文章最后评论区【留言和讨论】，当然，欢迎点击文章最后的打赏按键，请博主一杯冰阔乐，笑～</strong></p>
+<h1 id="对数器"><a href="#对数器" class="headerlink" title="对数器"></a>对数器</h1><p>写在前面：通常为了验证我们所写排序算法的正确性需要使用到对数器。</p>
+<p><strong>对数器的概念和使用</strong>:</p>
+<ul>
+<li>有一个需要测试的方法a</li>
+<li>实现一个绝对正确但是复杂度不好的方法b</li>
+<li>实现一个随机样本产生器</li>
+<li>实现比对的方法</li>
+<li>把方法a和方法b比对很多次来验证方法a是否正确</li>
+<li>如果有一个样本出错，打印分析之</li>
+<li>当样本足够多依然比对正确，那么方法a是正确的</li>
+</ul>
+<p><strong>下面是关于对数器的Java版本代码</strong></p>
+<pre><code>\\生成随机数数组，设定随机数据大小，以及随机数据最大值
+public static int[] generateRandomArray(int maxSize, int maxValue) {
+    int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
+    for (int i = 0; i &lt; arr.length; i++) {
+        arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
+    }
+    return arr;
+}
+\\拷贝操作，两个比较器对同一数据进行排序
+public static int[] copyArray(int[] arr) {
+    if (arr == null) {
+        return null;
+    }
+    int[] res = new int[arr.length];
+    for (int i = 0; i &lt; arr.length; i++) {
+        res[i] = arr[i];
+    }
+    return res;
+}
+\\之后就是不断的循环比较(比较大量的次数如果没有问题，那么应该是没有问题的)
+for (int i = 0; i &lt; testTime; i++) {
+    int[] arr1 = generateRandomArray(maxSize, maxValue);
+    int[] arr2 = copyArray(arr1);
+    if (maxGap(arr1) != comparator(arr2)) {
+        break;
+    }
+}</code></pre><h1 id="比较器"><a href="#比较器" class="headerlink" title="比较器"></a>比较器</h1><p>通常自定义比较器需要实现Comparator&lt;对象&gt;接口，举个例子</p>
+<pre><code>Class Node{
+    int age;
+    int score;
+}
+Class NodeComparaot implements Comparator&lt;Node&gt;{
+    @Override
+    public int compare(Node o1, Node o2){
+        return o1.age-o2.age； //表示age升序
+    }
+}</code></pre><h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><p>堆排序（HeapSort）通常是利用树这种数据结构所设计的一种排序算法，其按照完全二叉树来设计的。<br><strong>完全二叉树</strong>： 除了最后一层之外的其他每一层都被完全填充，并且所有结点都保持向左对齐。<br>因为排序通常是对数组进行排序，那么根据完全二叉树的特点，我们可以知道： </p>
+<ul>
+<li>父节点i的左子节点为2*i+1</li>
+<li>父节点i的右子节点为2*i+2</li>
+<li>子节点的父节点在(i-1)/2(向下取整)</li>
+</ul>
+<p>堆又分为<code>大根堆</code>和<code>小根堆</code>。大根堆即对于任意一个子节点，其数值均小于父节点的值。小根堆则相反。  </p>
+<p>之后就是建堆的操作，以大根堆为例。  </p>
+<h3 id="堆的插入"><a href="#堆的插入" class="headerlink" title="堆的插入"></a>堆的插入</h3><p>其步骤为：每次插入节点的时候，不断的向上查找节点，如果比父节点大则交换之，直到遇到小于等于父节点。  复杂度为<code>O（logn）</code><br>具体代码实现如下:  </p>
+<pre><code>// 堆的插入，往上查找直到小于等于父节点，index为插入节点的位置
+public static void heapInsert(int[] arr, int index) {
+    while (arr[index] &gt; arr[(index - 1) / 2]) {
+        swap(arr, index, (index - 1) / 2);
+        index = (index - 1) / 2;
+    }</code></pre><h3 id="堆的调整"><a href="#堆的调整" class="headerlink" title="堆的调整"></a>堆的调整</h3><p>每当我们取出堆顶的元素时候，需要对堆进行调整以保证堆保持在最大堆状态。<br>其步骤为：先将堆顶与尾部交换，然后此时头部较小那么需要调整，先从左右子节点中挑一个大的，然后不断向下寻找直到不比子节点小了就停止。调整代价为<code>O（logn）</code>，具体代码为：</p>
+<pre><code>public static void heapify(int[] arr, int index, int size) {
+    int left = index * 2 + 1;
+    while (left &lt; size) {
+        int largest = left + 1 &lt; size &amp;&amp; arr[left + 1] &gt; arr[left] ? left + 1 : left; //找到左右最大值
+        largest = arr[largest] &gt; arr[index] ? largest : index; //比较
+        if (largest == index) {
+            break;
+        }
+        swap(arr, largest, index); //与最大的交换，然后
+        index = largest;
+        left = index * 2 + 1;
+    }
+}</code></pre><h3 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h3><p>实际使用中我们通常采用<code>优先队列</code>的方式设置大根堆和小根堆。Java中为PriorityQueue，可以使用自定义比较器的方式设置比较的数据结构。 </p>
+<p><strong>常见问题</strong>：</p>
+<ul>
+<li>一个流不断吐出数，随时找到吐出流中的中位数，吐出的数是无序的。求吐出所有数的中位数。</li>
+<li>经典top k问题，给定大量数据找出top100位数。</li>
+<li>剑指offer 最小的k位数</li>
+</ul>
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p>快速排序指的是在数组中选择一个划分点，然后将数据划分为两个部分：一个比划分点小的部分，一个比划分点大的部分。然后不断迭代重复这个过程在左右两边。最后直到排序完毕。<br><code>具体代码如下</code>:  </p>
+<pre><code>public static void quickSort(int[] arr){
+    if(arr == null || arr.length &lt; 2){
+        return;
+    }
+    quickSort(arr,0,arr.length-1);
+}
+public static void quickSort(int[] arr, int l, int r){
+    if(l &lt; r){
+        swap(arr, l+(int)(Math.random()*(r-l+1)), r);//随机选取一个数放在最后作为快排目标
+        int[] p = partition(arr, l, r);//一遍快排给出边界
+        quickSort(arr, l, p[0]-1);//左边快排
+        quickSort(arr,p[1]+1,r);//右边快排
+    }
+}
+public static int[] partition(int[] arr, int l, int r){
+    int less = l-1;
+    int more = r;
+    while(l &lt; more){
+        if(arr[l] &lt; arr[r]){
+            swap(arr, ++less, l++);
+        }else if(arr[l] &gt; arr[r]){
+            swap(arr, --more, l);
+        }else{
+            l++;
+        }
+    }
+    swap(arr, more, r);
+    return new int[]{less+1, more};//返回等于num的左右边界
+}</code></pre><p><strong>常见问题</strong>:</p>
+<ul>
+<li>给定一个数组arr，和一个数Num,请把小于等于Num的数放在数组的左边，大于num的数放在数组的右边</li>
+<li>荷兰国旗问题：给定一个数组arr，和一个数Num,请把小于数放左边，等于的放中间，大于的放右边</li>
+</ul>
+<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>时间复杂度O（N*LogN）,额外空间复杂度O（N），采用的是分治的思想。<br>先左侧部分排好序，右侧部分排好序，然后利用外排的方式整体排序。具体代码如下：</p>
+<pre><code>public static void mergeSort(int[] arr) {
+    if (arr == null || arr.length &lt; 2) {
+        return;
+    }
+    mergeSort(arr, 0, arr.length - 1);
+}
 
-<table>
-  <tbody><tr>
-    <td><img width="100" src="https://sunhwee.com/medias/reward/alipay.bmp"></td>    <td><img width="100" src="https://sunhwee.com/medias/reward/wechat.bmp"></td>    <td><img width="100" src="https://sunhwee.com/medias/reward/zan.png"></td>   
-  </tr>
-</tbody></table>
+public static void mergeSort(int[] arr, int l, int r) {
+    if (l == r) {
+        return;
+    }
+    int mid = l + ((r - l) &gt;&gt; 1);
+    mergeSort(arr, l, mid);
+    mergeSort(arr, mid + 1, r);
+    merge(arr, l, mid, r);
+}
+
+public static void merge(int[] arr, int l, int m, int r) {
+    int[] help = new int[r - l + 1];
+    int i = 0;
+    int p1 = l;
+    int p2 = m + 1;
+    while (p1 &lt;= m &amp;&amp; p2 &lt;= r) {
+        help[i++] = arr[p1] &lt; arr[p2] ? arr[p1++] : arr[p2++];
+    }
+    while (p1 &lt;= m) {
+        help[i++] = arr[p1++];
+    }
+    while (p2 &lt;= r) {
+        help[i++] = arr[p2++];
+    }
+    for (i = 0; i &lt; help.length; i++) {
+        arr[l + i] = help[i];
+    }
+}</code></pre><p><strong>常见问题</strong>：</p>
+<ul>
+<li>小和问题：在一个数组中，每一个数左边比当前数小的数累加起来，就叫做这个数组的小和。求一个数组的小和。</li>
+<li>逆序对问题：一个数组中，左边的数如果比右边的大，则这两个数构成逆序对，请打印所有逆序对</li>
+</ul>
+<h1 id="排序稳定性"><a href="#排序稳定性" class="headerlink" title="排序稳定性"></a>排序稳定性</h1><p>排序稳定性指的是序列中相同的值在经过排序之后，相同的值仍然保持相对位置不变。<br>例如在数据[2,1,2,3,4,2]中，经过一趟排序之后第一个2是否还在第二个2之前，对所有相同值都是如此。  </p>
+<p><strong>稳定性的意义</strong>：在对象间进行比较的时候，希望原始序列能保存下来。</p>
+<p><strong>排序稳定的算法</strong>：</p>
+<ul>
+<li>冒泡排序：大值往下沉，遇到相同值换成下一个相同值往下沉，即可实现。O（n^2）</li>
+<li>插入排序：小值往前插，如果遇到相同的不插即可，换位下一个相同值进行插值。O(n^2)</li>
+<li>归并排序：归并的时候，相同的值先拷贝左边的再拷贝右边的，那么即可保持稳定。O（nLogn）</li>
+<li>桶排序：根据数据状况设计一个容器，每个容器里转若干数，稳定。O（N）</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -729,7 +809,7 @@
                     </span>
                     <a href="https://usingz.github.io" class="b-link-green">瞭望的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/20201/01/05/blog-open-source/" class="b-link-green">第一篇博客</a>
+                    <a href="/2020/01/03/pai-xu/" class="b-link-green">排序</a>
                 </p>
             </div>
 
@@ -751,10 +831,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/20201/01/05/blog-open-source/">
                     <div class="card-image">
@@ -772,9 +851,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>20201-01-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>20201-01-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -787,7 +866,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -795,7 +873,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
                 <a href="/2020/01/03/pai-xu/">
@@ -829,6 +907,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
